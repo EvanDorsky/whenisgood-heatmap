@@ -1,11 +1,12 @@
 (function() {
-	alert('hiiiiiiii')
 	var cants = []
 
-	$('.cantCount').each(function() {
+	var elements = document.querySelectorAll('.cantCount')
+
+	Array.prototype.forEach.call(elements, function(el, i) {
 		cants.push({
-			$el: this,
-			cantCount: numFromCant($(this).html())
+			$el: el,
+			cantCount: numFromCant(el.innerHTML)
 		})
 	})
 
@@ -27,14 +28,11 @@
 	}
 
 	cants.forEach(function(cant) {
-		var cell = $(cant.$el).parent().parent().parent().parent()
+		var cell = cant.$el.parentNode.parentNode.parentNode.parentNode
 
-		cell.css({
-			'background-color': function() {
-				return colorFromCant(min, max, cant.cantCount)
-			},
-			'color': 'white'
-		})
-		$(cant.$el).css({'color': 'white'})
+		cell.style.backgroundColor = colorFromCant(min, max, cant.cantCount)
+		cell.style.color = 'white'
+
+		cant.$el.style.color = 'white'
 	})
 })()
