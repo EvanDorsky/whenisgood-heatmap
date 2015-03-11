@@ -1,0 +1,26 @@
+{
+	"name": "Whenisgood heatmap",
+	"description": "Displays a heatmap",
+	"version": "1.0",
+
+	"permissions": [
+		// "*://*.whenisgood.net/*",
+		"activeTab"
+	],
+	"background": {
+		"scripts": ["click.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.whenisgood.net/*"],
+			"js": ["click.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Heatmap me"
+	},
+
+	"manifest_version": 2
+}
