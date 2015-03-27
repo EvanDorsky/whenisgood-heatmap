@@ -11,7 +11,7 @@
 	})
 
 	function numFromCant(cant) {
-		var num = (cant | 0)
+		var num = Number(cant)
 		if (num === num)
 			return num
 

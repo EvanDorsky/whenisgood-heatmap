@@ -1,6 +1,8 @@
-zip: heat-pack.zip
+name = heat-pack
 
-heat-pack.zip: heat-pack/*
-	mv heat-pack/icon.psd .
-	zip -r heat-pack.zip heat-pack
-	mv icon.psd heat-pack
+zip: $(name).zip
+
+$(name).zip: $(name)/*
+	mv $(name)/icon.psd .
+	zip -r $(name).zip $(name)
+	mv icon.psd $(name)
