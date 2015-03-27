@@ -2,7 +2,7 @@
 	"name": "Whenisgood heatmap",
 	"short_name": "WhenHeatMap",
 	"description": "Turns whenisgood results into a heatmap",
-	"version": "1.0",
+	"version": "1.0.1",
 
 	"permissions": [
 		"activeTab"
